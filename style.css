@@ -703,3 +703,14 @@
       background-position-x: 30%;
     }
   }
+  footer {
+    /* background-color: #000720; */
+    background-image: url("background.jpg");
+    padding: 40px 0px 30px;
+    text-align: center;
+    
+  }
+  h5{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fafafa;
+  }
