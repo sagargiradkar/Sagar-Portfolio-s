@@ -635,6 +635,7 @@
       text-align: center;
       width: 100%;
       position: absolute;
+      font-family: Georgia, 'Times New Roman', Times, serif;
     }
     .name-title>span, .name-title>a {
       position: relative;
