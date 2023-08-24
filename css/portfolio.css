@@ -335,6 +335,25 @@ header{
         background-image: url('../images/projects/Project4.png');
     }
 
+    .project-container #project-5{
+        background-image: url('../images/projects/Project5.png');
+    }
+
+    .project-container #project-6{
+        background-image: url('../images/projects/Project6.png');
+    }
+    .project-container #project-7{
+        background-image: url('../images/projects/Project7.png');
+    }
+    .project-container #project-8{
+        background-image: url('../images/projects/Project8.png');
+    }
+    .project-container #project-9{
+        background-image: url('../images/projects/Project9.png');
+    }
+    .project-container #project-10{
+        background-image: url('../images/projects/Project10.png');
+    }
     .project-card:nth-child(even){
         align-self: flex-end;
     }
