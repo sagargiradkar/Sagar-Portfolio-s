@@ -32,7 +32,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sagar Giradkar Portfolio's Website</title>
+    <title>Sagar's Portfolio's Website</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -67,7 +67,7 @@
       <div class="faded-text">Sagar Giradkar</div>
 
       <div class="hero-section-left">
-        <h1 class="name">Hi! I am Sagar Giradkar</h1>
+        <h1 class="name">Hi! Sagar Giradkar</h1>
         <p class="profession">I am a <span class="role"></span></p>
         <p class="desc">
           I’m a software developer and here is my portfolio website. Here you’ll
@@ -541,17 +541,20 @@
           Questions, thoughts, or just want to say hello?
         </h3>
 
-        <form action= "" class="contact-form" onsubmit="sendEmail(); reset(); return false;">
+        <form action= "" class="contact-form" >
           <div class="form-field">
-            <input type="text" placeholder="Enter your name" />
+            <input type="text" placeholder="Enter your name..."  id="name"/>
           </div>
 
           <div class="form-field">
-            <input type="email" placeholder="Enter your email address" />
+            <input type="text" placeholder="Enter your Contact number......" id="contact">
+        </div>
+          <div class="form-field">
+            <input type="email" placeholder="Enter your email address..."  id="email" />
           </div>
 
           <div class="form-field">
-            <input type="text" placeholder="Enter your subject" />
+            <input type="text" placeholder="Enter your subject..." id="subject" />
           </div>
 
           <div class="form-field">
@@ -560,12 +563,12 @@
               id="my-textarea"
               cols="30"
               rows="10"
-              placeholder="Enter your message"
+              placeholder="Enter your message..."
             ></textarea>
           </div>
 
           <div class="button-field">
-            <button type="submit" class="btn form-btn">
+            <button type="button" onclick="SendEmail()" class="btn form-btn">
               Send Message
               <i class="fa-solid fa-paper-plane icon"></i>
             </button>
@@ -629,24 +632,32 @@
         backDelay: 1000,
       });
     </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail(){
-        Email.send({
-          Host : "smtp.gmail.com",
-          Username : "21143051@pvgcoet.ac.in",
-          Password : "Sagar@2002",
-          To : 'spgiradkar2002@gmail.com',
-          From : document.getElementById("email").value,
-          Subject : "New Contact Form Enqiry",
-          Body : "Name" + document.getElementById("name").value
-                + "<br> Email:" +document.getElementById("email").value
-                + + "<br> Message:" +document.getElementById("message").value
+     <script src="https://smtpjs.com/v3/smtp.js"> </script>
 
-      }).then(
-  message => alert("Message Sent Succesfully")
-);
-      }
-    </script>
+
+     <script>
+         function SendEmail(){
+           let name = document.getElementById("name").value;
+           let email = document.getElementById("email").value;
+           let conatact = document.getElementById("contact").value;
+           let subject = document.getElementById("subject").value;
+           let message = document.getElementById("my-textarea").value;
+         
+           let body = "Name:" + name + "<br/> Email:" + email + "<br/> Contact Number:" + conatact + "<br/> Subject:" + subject + "<br/> Messages:" + message;
+        
+         
+         Email.send({
+         SecureToken : "98efb6a3-b0cc-497f-afb7-4617e07a5590",
+         To : 'spgiradkar2002@gmail.com',
+         From : "spgiradkar2002@gmail.com",
+         Subject : "Message From Contact Form",
+         Body : body
+          }).then(
+        message => alert("Thank You ! Your Message Send Succesfully")
+          );
+ 
+             
+         }
+     </script>
   </body>
 </html>
