@@ -373,6 +373,9 @@ header{
     .project-container #project-16{
         background-image: url('../images/projects/Project16.png');
     }
+    .project-container #project-17{
+        background-image: url('../images/projects/Project17.png');
+    }
     .project-card:nth-child(even){
         align-self: flex-end;
     }
