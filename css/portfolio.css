@@ -427,12 +427,16 @@ header .logo-div .name {
         width: 90%;
         height: 55rem;
         background-color: #afafaf;
-        background-image: url('../images/projects/Project1.png');
+        /* background-image: url('../images/projects/Project1.png'); */
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 0 0 4rem #1f1f1f;
         position: relative;
     }
+
+    .project-container #project-1{
+      background-image: url('../images/projects/Project1.png');
+  }
 
     .project-container #project-2{
         background-image: url('../images/projects/Project2.png');
@@ -488,6 +492,7 @@ header .logo-div .name {
         background-image: url('../images/projects/Project17.png');
     }
     @media only screen and (max-width: 768px) {
+        .project-container #project-1,
         .project-container #project-2,
         .project-container #project-3,
         .project-container #project-4,
@@ -562,7 +567,7 @@ header .logo-div .name {
     }
 
     .project-card:nth-child(odd) .project-content{
-        left: 10%;
+        left: 30%;
     }
 
     .project-card:nth-child(even) .project-content{
@@ -590,12 +595,23 @@ header .logo-div .name {
         font-style: italic;
         max-width: 70%;
     }
-
-    .project-content .project-buttons{
-        display:flex;
-        gap: 1.6rem;
-        align-items: center;
-    }
+    .project-content .project-buttons {
+      display: flex;
+      gap: 1.6rem;
+      align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+      .project-content .project-buttons {
+          flex-direction: column; /* Stack buttons vertically on smaller screens */
+          align-items: flex-start; /* Align buttons to the start on smaller screens */
+      }
+  
+      .project-content .project-buttons button {
+          margin-top: 1rem; /* Add some space between stacked buttons on smaller screens */
+      }
+  }
+  
 
     .project-buttons .icons{
         font-size: 4rem;
@@ -606,28 +622,53 @@ header .logo-div .name {
     .project-buttons .icons:hover{
         color: var(--clr-orange);
     }
-
-    .project-card .project-number{
-        font-size: 20rem;
-        font-weight: 600;
-        color: var(--clr-white);
-        position: absolute;
-        right: -4rem;
-        top: -4.5rem;
-        z-index: 10;
-        opacity: 0;
-        transition: opacity 0.2s;
-    }
-
-    .project-card:hover .project-number{
-        opacity: 1;
-    }
-
-    .project-card:nth-child(even) .project-number{
-        left: -4rem;
-        top: -4.5rem;
-    }
-
+    .project-card .project-number {
+      font-size: 20rem;
+      font-weight: 600;
+      color: var(--clr-white);
+      position: absolute;
+      right: -4rem;
+      top: -4.5rem;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.2s;
+  }
+  
+  .project-card:hover .project-number {
+      opacity: 1;
+  }
+  
+  .project-card:nth-child(even) .project-number {
+      left: -4.5rem;
+      top: -5rem;
+  }
+  
+  @media (max-width: 768px) {
+      .project-card .project-number {
+          font-size: 15rem; /* Adjust font size for smaller screens */
+          right: -2rem; /* Adjust the right position for smaller screens */
+          top: -3.5rem; /* Adjust the top position for smaller screens */
+      }
+  
+      .project-card:nth-child(even) .project-number {
+          left: -3rem; /* Adjust left position for even cards on smaller screens */
+          top: -4rem; /* Adjust top position for even cards on smaller screens */
+      }
+  }
+  
+  @media (max-width: 576px) {
+      .project-card .project-number {
+          font-size: 10rem; /* Further adjust font size for even smaller screens */
+          right: -1rem; /* Further adjust the right position for even smaller screens */
+          top: -2.5rem; /* Further adjust the top position for even smaller screens */
+      }
+  
+      .project-card:nth-child(even) .project-number {
+          left: -2rem; /* Further adjust left position for even cards on even smaller screens */
+          top: -3rem; /* Further adjust top position for even cards on even smaller screens */
+      }
+  }
+  
 /* Media Query for screens smaller than 768px (typical mobile devices) */
 @media only screen and (max-width: 768px) {
     .project-section .project-container {
