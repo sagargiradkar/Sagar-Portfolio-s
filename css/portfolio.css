@@ -316,12 +316,16 @@ header{
         width: 90%;
         height: 55rem;
         background-color: #afafaf;
-        background-image: url('../images/projects/Project1.png');
+        /* background-image: url('../images/projects/Project1.png'); */
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 0 0 4rem #1f1f1f;
         position: relative;
     }
+
+    .project-container #project-1{
+      background-image: url('../images/projects/Project1.png');
+  }
 
     .project-container #project-2{
         background-image: url('../images/projects/Project2.png');
@@ -376,6 +380,28 @@ header{
     .project-container #project-17{
         background-image: url('../images/projects/Project17.png');
     }
+    @media only screen and (max-width: 768px) {
+        .project-container #project-2,
+        .project-container #project-3,
+        .project-container #project-4,
+        .project-container #project-5,
+        .project-container #project-6,
+        .project-container #project-7,
+        .project-container #project-8,
+        .project-container #project-9,
+        .project-container #project-10,
+        .project-container #project-11,
+        .project-container #project-12,
+        .project-container #project-13,
+        .project-container #project-14,
+        .project-container #project-15,
+        .project-container #project-16,
+        .project-container #project-17 {
+            background-size: contain; /* Adjust background size for smaller screens */
+            background-position: center; /* Center background image on smaller screens */
+            background-repeat: no-repeat; /* Disable background image repetition on smaller screens */
+        }
+    }
     .project-card:nth-child(even){
         align-self: flex-end;
     }
@@ -429,7 +455,7 @@ header{
     }
 
     .project-card:nth-child(odd) .project-content{
-        left: 10%;
+        left: 30%;
     }
 
     .project-card:nth-child(even) .project-content{
@@ -457,12 +483,23 @@ header{
         font-style: italic;
         max-width: 70%;
     }
-
-    .project-content .project-buttons{
-        display:flex;
-        gap: 1.6rem;
-        align-items: center;
-    }
+    .project-content .project-buttons {
+      display: flex;
+      gap: 1.6rem;
+      align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+      .project-content .project-buttons {
+          flex-direction: column; /* Stack buttons vertically on smaller screens */
+          align-items: flex-start; /* Align buttons to the start on smaller screens */
+      }
+  
+      .project-content .project-buttons button {
+          margin-top: 1rem; /* Add some space between stacked buttons on smaller screens */
+      }
+  }
+  
 
     .project-buttons .icons{
         font-size: 4rem;
@@ -495,6 +532,58 @@ header{
         top: -4.5rem;
     }
 
+/* Media Query for screens smaller than 768px (typical mobile devices) */
+@media only screen and (max-width: 768px) {
+    .project-section .project-container {
+        gap: 3rem; /* Adjust gap for better spacing on smaller screens */
+    }
+
+    .project-container .project-card {
+        width: 100%; /* Make cards full width on smaller screens */
+        max-width: none; /* Remove max-width on smaller screens */
+        align-self: auto; /* Reset alignment on smaller screens */
+    }
+
+    .project-card:nth-child(odd) .project-content,
+    .project-card:nth-child(even) .project-content {
+        left: auto;
+        right: auto;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .project-content .project-skills-container {
+        max-width: 100%; /* Make skills container full width on smaller screens */
+    }
+
+    .project-content p {
+        max-width: 100%; /* Make text full width on smaller screens */
+    }
+
+    .project-content .project-buttons {
+        justify-content: center; /* Center buttons on smaller screens */
+    }
+
+    .project-content h2 {
+        font-size: 3.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .project-content p {
+        font-size: 1.4rem; /* Adjust font size for smaller screens */
+    }
+
+    .project-content .project-skills-container img {
+        width: 3rem; /* Adjust image size for smaller screens */
+    }
+
+    .project-card .project-number {
+        font-size: 10rem; /* Adjust font size for smaller screens */
+        right: auto;
+        top: auto;
+        bottom: -2.5rem; /* Adjust position for better spacing */
+        left: 50%; /* Center number on smaller screens */
+        transform: translateX(-50%); /* Center number on smaller screens */
+    }
+}
 /* //////////////// skills ///////////////// */
 .skill-section{
     position: relative;
