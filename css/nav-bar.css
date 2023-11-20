@@ -14,6 +14,10 @@ html body {
   transition: 1s;
   font-family: 'Poppins', sans-serif;
 }
+body {
+  font-size: 1.6rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
 
 a {
   text-decoration: none;
@@ -56,11 +60,8 @@ nav {
 .nav_container {
   position: relative;
   z-index: 5;
-  /* max-width: 92rem; */
-  /*background-color: red;*/
-  padding: 0 4rem;
-  /* margin: 0 5rem; */
-
+  width: 100%; /* Set the width to 100% to occupy the full width */
+  padding: 0; /* Remove padding */
 }
 
 nav .nav_container {
@@ -237,7 +238,7 @@ nav.open .links {
     height: 100vh;
     top: 0;
     right: 0;
-    background-color: #081340;
+    background-color: #323f63;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -267,7 +268,7 @@ nav.open .links {
 
   .links a.active_nav {
     background-color: var(--light-one);
-    color: #19223A;
+    color: #323f63;
     border-radius: 2rem;
     font-size: 1rem;
     padding: 0.7rem 1.5rem;
@@ -290,57 +291,4 @@ nav.open .links {
     width: 150px;
   }
 
-}
-
-.navbarr {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%; /* Set the width to 100% to occupy the full width */
-  z-index: 1001;
-  top: 0;
-  left: 0; /* Set left to 0 to align with the left edge */
-  border-bottom: 1px solid gray;
-  box-shadow: 0px 15px 10px -15px #111;
-}
-
-.nav_container {
-  position: relative;
-  z-index: 5;
-  width: 100%; /* Set the width to 100% to occupy the full width */
-  padding: 0 2rem; /* Adjust padding as needed */
-}
-
-.logo {
-  width: auto; /* Allow the logo to adjust its width based on content */
-  display: flex;
-  font-weight: bold;
-  font-size: larger;
-  justify-content: space-between;
-}
-
-.hamburger-menu {
-  width: 2.7rem;
-  height: 3rem;
-  z-index: 100;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.links {
-  position: fixed;
-  width: 100%; /* Set the width to 100% to occupy the full width */
-  height: 100vh;
-  top: 0;
-  right: 0;
-  background-color: #081340;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform: translateX(100%);
-  transition: 0.5s;
-  border-radius: 0; /* Remove the border-radius */
 }
