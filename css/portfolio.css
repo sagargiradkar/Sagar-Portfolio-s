@@ -105,12 +105,32 @@ section > h2 {
 }
 
 .nav-div {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 100%;
-    margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 20px;
+  background-color: var(--clr-dark-blue); /* Set background color */
 }
+
+.nav-div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-div ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-div ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+  /* Add any additional styles as needed */
+}
+
 .hamburger-btn {
     display: none;
     cursor: pointer;
@@ -979,7 +999,13 @@ footer {
     align-items: center;
     padding: 2rem 2.5rem;
   }
-  
+  .footer-content .container {
+    width: 100%;
+  }
+  .footer-fadded-text,
+.nav-div ul {
+  margin: auto;
+}
   .footer-fadded-text {
     font-size: 8rem;
     position: absolute;
@@ -987,6 +1013,16 @@ footer {
     bottom: 0;
     color: #535c87;
     user-select: none;
+  }
+  @media (max-width: 767px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-fadded-text,
+    .nav-div ul {
+      margin: auto;
+    }
   }
   @media only screen and (max-width: 768px) {
     .footer-fadded-text {

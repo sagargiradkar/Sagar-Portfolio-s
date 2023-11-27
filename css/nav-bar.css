@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
 
 :root {
-
   --dark-one: #333;
   --dark-two: #7a7a7a;
   --light-one: #fff;
   --light-two: #f9fafb;
-
 }
 
 html body {
@@ -14,9 +12,10 @@ html body {
   transition: 1s;
   font-family: 'Poppins', sans-serif;
 }
+
 body {
   font-size: 1.6rem;
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif; /* Apply the font family to the body */
 }
 
 a {
@@ -31,13 +30,23 @@ ul {
   margin-top: 6.5rem;
 }
 
-
 nav {
   width: 100%;
   background-color: var(--light-one);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif; /* Apply the font family to the navbar */
   font-weight: 300;
+}
 
+/* Add font-family to other relevant selectors in your existing code */
+
+.links ul a,
+.links a,
+.links a.active_nav,
+.links a:hover,
+.nav_item a,
+.test1,
+.test2 {
+  font-family: 'Be Vietnam Pro', sans-serif; /* Apply the font family to these elements */
 }
 
 .navbarr {
@@ -188,7 +197,7 @@ nav.open .links {
 .nav_item a::after {
   content: "";
   position: absolute;
-  background-color: #4894bc;
+  background-color:var(--clr-dark-blue);
   height: 3px;
   width: 0;
   left: 0;
@@ -238,7 +247,7 @@ nav.open .links {
     height: 100vh;
     top: 0;
     right: 0;
-    background-color: #323f63;
+    background-color:var(--clr-dark-blue);
     display: flex;
     align-items: center;
     justify-content: center;
