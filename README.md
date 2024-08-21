@@ -8,9 +8,9 @@ Welcome to my portfolio website repository! I'm thrilled to have you here. This 
 
 Hey there! I'm Sagar Prakash Giradkar, a passionate about web technology with a strong penchant for designing interactive websites. My journey in the world of Web Technology has been a dynamic one, marked by a commitment to continuous learning and pushing the boundaries of what's possible.
 
-## What's Inside
+## What's Inside 
 
-This portfolio website serves as a digital canvas showcasing a selection of my projects, each representing a different facet of my skill set and the challenges I've embraced.
+This portfolio website serves as a digital canvas showcasing a selection of my projects, each representing a different facet of my skill set and the challenges I've embraced .
 
 ## Highlights
 
