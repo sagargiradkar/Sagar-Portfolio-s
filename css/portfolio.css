@@ -424,6 +424,168 @@ header .logo-div .name {
         }
     }
 
+/* ///////////////////// Experience section //////////////// */
+.experience-section {
+  background-color: var(--clr-light);
+  padding-top: 3rem;
+}
+
+.experience-section .experience-header {
+  text-align: center;
+}
+
+.experience-section .experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
+}
+
+.experience-container .experience-card {
+  width: 90%;
+  height: 55rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.experience-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.4s;
+  z-index: 2;
+}
+
+.experience-card:hover::after {
+  transform: scaleX(1);
+}
+
+.experience-card .experience-content {
+  color: #000; /* Black text */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3.2rem;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  z-index: 5;
+  transition: all 0.4s;
+  text-align: justify; /* Text aligned justified */
+}
+
+.experience-card:hover > .experience-content {
+  scale: 1.1;
+}
+
+.experience-content .experience-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 60%;
+}
+
+.experience-content .experience-skills-container img {
+  width: 4rem;
+}
+
+.experience-content h2 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.experience-content p {
+  font-size: 1.6rem;
+  font-style: italic;
+  max-width: 70%;
+  text-align: justify; /* Aligning text justify for paragraphs */
+}
+
+.experience-content .experience-buttons {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.experience-buttons .icons {
+  font-size: 4rem;
+  color: var(--clr-white);
+  transition: all 0.4s;
+}
+
+.experience-buttons .icons:hover {
+  color: var(--clr-orange);
+}
+
+.experience-card .experience-number {
+  font-size: 10rem;
+  font-weight: 600;
+  color: var(--clr-light-gray);
+  position: absolute;
+  right: -4rem;
+  top: -4.5rem;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.experience-card:hover .experience-number {
+  opacity: 1;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .experience-container .experience-card {
+      width: 100%;
+  }
+
+  .experience-card .experience-content {
+      text-align: justify; /* Ensures text is justified */
+      left: auto;
+      right: auto;
+      padding: 2rem; /* Reducing padding for smaller screens */
+  }
+
+  .experience-content h2 {
+      font-size: 4vw; /* Responsive font size based on viewport width */
+  }
+
+  .experience-content p {
+      font-size: 1.6vw; /* Responsive font size */
+      max-width: 100%; /* Ensure the text container uses full width */
+      text-align: justify; /* Align text justify */
+  }
+
+  .experience-content .experience-skills-container img {
+      width: 3rem;
+  }
+
+  .experience-card .experience-number {
+      font-size: 5rem;
+      bottom: -2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
 
 /* ///////////////////// project section //////////////// */
 .project-section{

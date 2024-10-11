@@ -1,1068 +1,975 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Start of Async Drift Cod -->
-    <script>
-      "use strict";
 
-      !(function () {
-        var t = (window.driftt = window.drift = window.driftt || []);
-        if (!t.init) {
-          if (t.invoked)
-            return void (
-              window.console &&
-              console.error &&
-              console.error("Drift snippet included twice.")
-            );
-          (t.invoked = !0),
-            (t.methods = [
-              "identify",
-              "config",
-              "track",
-              "reset",
-              "debug",
-              "show",
-              "ping",
-              "page",
-              "hide",
-              "off",
-              "on",
-            ]),
-            (t.factory = function (e) {
-              return function () {
-                var n = Array.prototype.slice.call(arguments);
-                return n.unshift(e), t.push(n), t;
-              };
-            }),
-            t.methods.forEach(function (e) {
-              t[e] = t.factory(e);
-            }),
-            (t.load = function (t) {
-              var e = 3e5,
-                n = Math.ceil(new Date() / e) * e,
-                o = document.createElement("script");
-              (o.type = "text/javascript"),
-                (o.async = !0),
-                (o.crossorigin = "anonymous"),
-                (o.src =
-                  "https://js.driftt.com/include/" + n + "/" + t + ".js");
-              var i = document.getElementsByTagName("script")[0];
-              i.parentNode.insertBefore(o, i);
-            });
-        }
-      })();
-      drift.SNIPPET_VERSION = "0.3.1";
-      drift.load("aid2wbgiiasw");
-    </script>
-    <!-- End of Async Drift Code -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sagar's Portfolio's Website</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <!-- Start of Async Drift Cod -->
+  <script>
+    "use strict";
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/nav-bar.css" />
-    <link rel="stylesheet" href="css/portfolio.css" />
-  </head>
-  <body>
-    <!-- ///////// header /////////-->
-    <header class="container">
-      <div class="navbarr">
-        <nav>
-          <div class="nav_container">
-            <div class="logo">SAGAR GIRADKAR</div>
-            <div class="links">
-              <ul>
-                <li class="nav_item">
-                  <a class="nav_link active_nav" href="#">Home</a>
-                </li>
-                <li class="nav_item">
-                  <a class="nav_link" href="#projects">Projects </a>
-                </li>
-                <li class="nav_item">
-                  <a class="nav_link" href="#skills">Skills</a>
-                </li>
-                <li class="nav_item">
-                  <a class="nav_link" href="#contact">Contact Me</a>
-                </li>
-              </ul>
-            </div>
-            <div class="hamburger-menu">
-              <div class="bar"></div>
-            </div>
+    !(function () {
+      var t = (window.driftt = window.drift = window.driftt || []);
+      if (!t.init) {
+        if (t.invoked)
+          return void (
+            window.console &&
+            console.error &&
+            console.error("Drift snippet included twice.")
+          );
+        (t.invoked = !0),
+          (t.methods = [
+            "identify",
+            "config",
+            "track",
+            "reset",
+            "debug",
+            "show",
+            "ping",
+            "page",
+            "hide",
+            "off",
+            "on",
+          ]),
+          (t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }),
+          t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }),
+          (t.load = function (t) {
+            var e = 3e5,
+              n = Math.ceil(new Date() / e) * e,
+              o = document.createElement("script");
+            (o.type = "text/javascript"),
+              (o.async = !0),
+              (o.crossorigin = "anonymous"),
+              (o.src =
+                "https://js.driftt.com/include/" + n + "/" + t + ".js");
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          });
+      }
+    })();
+    drift.SNIPPET_VERSION = "0.3.1";
+    drift.load("aid2wbgiiasw");
+  </script>
+  <!-- End of Async Drift Code -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sagar's Portfolio's Website</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/nav-bar.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+
+<body>
+  <!-- ///////// header /////////-->
+  <header class="container">
+    <div class="navbarr">
+      <nav>
+        <div class="nav_container">
+          <div class="logo">SAGAR GIRADKAR</div>
+          <div class="links">
+            <ul>
+              <li class="nav_item">
+                <a class="nav_link active_nav" href="#">Home</a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#experience">Experience </a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#projects">Projects </a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#skills">Skills</a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#contact">Contact Me</a>
+              </li>
+            </ul>
           </div>
-        </nav>
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ////////// hero section ////////// -->
+  <section class="hero-section container">
+    <!-- <div class="faded-text">Sagar Giradkar</div> -->
+
+    <div class="hero-section-left">
+      <h1 class="name">Hi! I am Sagar Giradkar</h1>
+      <p class="profession">I am a <span class="role"></span></p>
+      <p class="desc">
+        Hello there! I'm Sagar , a passionate Full-Stack Developer. This is the space where you can dive into my
+        exciting journey in the world of web development and software engineering. I've dedicated myself to creating
+        captivating user interfaces and crafting robust software solutions.
+      </p>
+      <button class="btn">
+        <a href="https://drive.google.com/file/d/1cznD5kaThCC9Hv1Jkt7MQI-5_-jAJWj_/view?usp=drive_link">Hire me</a>
+      </button>
+    </div>
+
+    <div class="hero-section-right">
+      <div class="my-image">
+        <img src="images/userAsset/UserImage.png" alt="" />
       </div>
-    </header>
 
-    <!-- ////////// hero section ////////// -->
-    <section class="hero-section container">
-      <div class="faded-text">Sagar Giradkar</div>
-
-      <div class="hero-section-left">
-        <h1 class="name">Hi! I am Sagar Giradkar</h1>
-        <p class="profession">I am a <span class="role"></span></p>
-        <p class="desc">
-          Hello there! I'm Sagar , a passionate Front-End Developer and Software Developer. This is the space where you can dive into my exciting journey in the world of web development and software engineering. I've dedicated myself to creating captivating user interfaces and crafting robust software solutions.
-        </p>
-        <button class="btn">
-          <a
-            href="https://drive.google.com/file/d/1cznD5kaThCC9Hv1Jkt7MQI-5_-jAJWj_/view?usp=drive_link"
-            >Hire me</a
-          >
-        </button>
+      <div class="icon-zigzag">
+        <img src="images/userAsset/zigzags.png" alt="" />
       </div>
 
-      <div class="hero-section-right">
-        <div class="my-image">
-          <img src="images/userAsset/UserImage.png" alt="" />
-        </div>
+      <div class="icon-plus">
+        <img src="images/userAsset/plus.png" alt="" />
+      </div>
 
-        <div class="icon-zigzag">
-          <img src="images/userAsset/zigzags.png" alt="" />
-        </div>
+      <div class="icon-cube">
+        <img src="images/userAsset/cube.png" alt="" />
+      </div>
 
-        <div class="icon-plus">
-          <img src="images/userAsset/plus.png" alt="" />
-        </div>
+      <div class="icon-circle">
+        <img src="images/userAsset/circle.png" alt="" />
+      </div>
 
-        <div class="icon-cube">
-          <img src="images/userAsset/cube.png" alt="" />
-        </div>
+      <div class="icon-dots">
+        <img src="images/userAsset/dots.png" alt="" />
+      </div>
+    </div>
+  </section>
+  <!-- ////////////////// Experience section //////// -->
+  <section class="experience-section" id="experience">
+    <h2 class="experience-header">Experience</h2>
 
-        <div class="icon-circle">
-          <img src="images/userAsset/circle.png" alt="" />
-        </div>
+    <div class="experience-container container">
+      <!-- // Experience 1 // -->
+      <div class="experience-card" id="experience-3">
+        <div class="experience-number">03</div>
+        <div class="experience-content">
+          <div class="experience-skills-container">
+            <img src="images/stack/React.png" alt="" />
+            <img src="images/stack/NodeJs.svg" alt="" />
+            <img src="images/stack/Express.png" alt="" />
+            <img src="images/stack/MongoDB.svg" alt="" />
+          </div>
 
-        <div class="icon-dots">
-          <img src="images/userAsset/dots.png" alt="" />
+          <h2>React-Native Full Stack Developer Intern – Real List Ai Technologies</h2>
+
+          <p>
+            Developed a cross-platform mobile app with React Native, enhancing UI and boosting data retrieval by 40%
+            using Express.js & Node.js for over 5,000 active users.
+          </p>
+
+          <div class="experience-buttons">
+            <a href="https://reallist.ai/"> <button class="btn">Read More</button></a>
+           
+          </div>
         </div>
       </div>
-    </section>
+      <!-- //end Experience 1/// -->
 
-    <!-- /////// projects section /////////// -->
-    <section class="project-section" id="projects">
-      <h2 class="project-header">projects</h2>
+      <!-- // Experience 2 // -->
+      <div class="experience-card" id="experience-2">
+        <div class="experience-number">02</div>
+        <div class="experience-content">
+          <div class="experience-skills-container">
+            <img src="images/stack/React.png" alt="" />
+            <img src="images/stack/NodeJs.svg" alt="" />
+            <img src="images/stack/Express.png" alt="" />
+            <img src="images/stack/MongoDB.svg" alt="" />
+          </div>
 
-      <div class="project-container container">
-        <!-- // Projects 1 // -->
-        <div class="project-card" id="project-1">
-          <div class="project-number">01</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-              <!-- <img src="images/stack/Express.png" alt="" />
+          <h2>Software Developer Intern – Girl Script Summer of Code</h2>
+
+          <p>
+            Designed a healthcare app UI using React Native, improving user engagement and reducing support queries by
+            30%.
+          </p>
+
+          <div class="experience-buttons">
+            <a href="https://gssoc.girlscript.tech/"> <button class="btn">Read More</button></a>
+           
+          </div>
+        </div>
+      </div>
+      <!-- //end Experience 2/// -->
+      <!-- // Experience 1 // -->
+      <div class="experience-card" id="experience-1">
+        <div class="experience-number">01</div>
+        <div class="experience-content">
+          <div class="experience-skills-container">
+            <img src="images/stack/React.png" alt="" />
+            <img src="images/stack/NodeJs.svg" alt="" />
+            <img src="images/stack/Express.png" alt="" />
+            <img src="images/stack/MongoDB.svg" alt="" />
+            <img src="images/stack/AWS.png" alt="" /> <!-- Add any other relevant tech stack images -->
+          </div>
+
+          <h2>Software Engineering Intern – Argyle Enigma Tech Lab</h2>
+          <p>
+            Developed and deployed RESTful APIs for the Fili: Financial Literacy app, showcasing React Native skills and
+            app publishing on Google Play. Utilized JIRA for project management, ensuring efficient task tracking.
+          </p>
+
+          <div class="experience-buttons">
+            <a href="https://www.arglyeenigma.com/">  <button class="btn">Read More</button></a>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- /////// projects section /////////// -->
+  <section class="project-section" id="projects">
+    <h2 class="project-header">projects</h2>
+
+    <div class="project-container container">
+      <!-- // Projects 1 // -->
+      <div class="project-card" id="project-1">
+        <div class="project-number">01</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+            <!-- <img src="images/stack/Express.png" alt="" />
               <img src="images/stack/NextJsCircle.png" alt="" /> -->
-              <img src="images/stack/Tailwind.png" alt="" />
-              <!-- <img src="images/stack/NodeJs.svg" alt="" />
+            <img src="images/stack/Tailwind.png" alt="" />
+            <!-- <img src="images/stack/NodeJs.svg" alt="" />
               <img src="images/stack/MongoDB.svg" alt="" />
               <img src="images/stack/Redux.svg" alt="" />
               <img src="images/stack/Vercel.svg" alt="" /> -->
-            </div>
+          </div>
 
-            <h2>Razorpay Clone Website</h2>
+          <h2>Razorpay Clone Website</h2>
 
-            <p>
-              Razorpay is the only payments solution in India that allows
-              businesses to accept, process and disburse payments with its
-              product suite .
-            </p>
+          <p>
+            Razorpay is the only payments solution in India that allows
+            businesses to accept, process and disburse payments with its
+            product suite .
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Razorpay-Clone"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Razorpay-Clone" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a href="https://razorpayclonesagar.netlify.app/" target="_blank">
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://razorpayclonesagar.netlify.app/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!-- //end Project 1/// -->
-        <!-- Project 02 -->
-        <div class="project-card" id="project-17">
-          <div class="project-number">02</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-              <img src="images/stack/NodeJs.svg" alt="" />
-              <img src="images/stack/React.png" alt="" />
-              <img src="images/stack/Redux.svg" alt="" />
-              <img src="images/stack/Vercel.svg" alt="" />
-            </div>
+      </div>
+      <!-- //end Project 1/// -->
+      <!-- Project 02 -->
+      <div class="project-card" id="project-17">
+        <div class="project-number">02</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+            <img src="images/stack/NodeJs.svg" alt="" />
+            <img src="images/stack/React.png" alt="" />
+            <img src="images/stack/Redux.svg" alt="" />
+            <img src="images/stack/Vercel.svg" alt="" />
+          </div>
 
-            <h2>Shopping Cart App </h2>
+          <h2>Shopping Cart App </h2>
 
-            <p>
-              This project is a simple shopping cart application built with
-              React, Redux, and Tailwind CSS. It allows users to browse
-              products, add them to the cart, and proceed to checkout. The state
-              management is handled using Redux, providing a predictable and
-              centralized way to manage application state.
-            </p>
+          <p>
+            This project is a simple shopping cart application built with
+            React, Redux, and Tailwind CSS. It allows users to browse
+            products, add them to the cart, and proceed to checkout. The state
+            management is handled using Redux, providing a predictable and
+            centralized way to manage application state.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/shopping-cart"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/shopping-cart" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://shopping-cart-git-main-sagargiradkar.vercel.app/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://shopping-cart-git-main-sagargiradkar.vercel.app/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 02 -->
+      </div>
+      <!--End  Prohect 02 -->
 
-        <!-- //Project 3// -->
-        <div class="project-card" id="project-3">
-          <div class="project-number">03</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-              <!-- <img src="images/stack/NextJsCircle.png" alt="" />
+      <!-- //Project 3// -->
+      <div class="project-card" id="project-3">
+        <div class="project-number">03</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+            <!-- <img src="images/stack/NextJsCircle.png" alt="" />
               <img src="images/stack/Tailwind.png" alt="" />
               <img src="images/stack/Vercel.svg" alt="" /> -->
-            </div>
+          </div>
 
-            <h2>Hotstar Website Clone</h2>
+          <h2>Hotstar Website Clone</h2>
 
-            <p>
-              Disney + Hotstar is an Indian subscription video on-demand
-              over-the-top streaming service owned by The Walt Disney Company
-              India and operated by Disney Streaming .
-            </p>
+          <p>
+            Disney + Hotstar is an Indian subscription video on-demand
+            over-the-top streaming service owned by The Walt Disney Company
+            India and operated by Disney Streaming .
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Disney-Hostar-website"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Disney-Hostar-website" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Disney-Hostar-website/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Disney-Hostar-website/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!-- //End 3/// -->
+      </div>
+      <!-- //End 3/// -->
 
-        <!-- //Project 4 // -->
-        <div class="project-card" id="project-4">
-          <div class="project-number">04</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      <!-- //Project 4 // -->
+      <div class="project-card" id="project-4">
+        <div class="project-number">04</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Fresh Food Delivery</h2>
+          <h2>Fresh Food Delivery</h2>
 
-            <p>
-              Online food ordering is the process of ordering food, for delivery
-              or pickup, from a website or other application.
-            </p>
+          <p>
+            Online food ordering is the process of ordering food, for delivery
+            or pickup, from a website or other application.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/FoodShopProject-master"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/FoodShopProject-master" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/FoodShopProject-master/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/FoodShopProject-master/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!-- ///// -->
-        <!-- Project 5 -->
-        <div class="project-card" id="project-5">
-          <div class="project-number">05</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      </div>
+      <!-- ///// -->
+      <!-- Project 5 -->
+      <div class="project-card" id="project-5">
+        <div class="project-number">05</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Grocery Website</h2>
+          <h2>Grocery Website</h2>
 
-            <p>
-              The Grocery Website is a virtual marketplace where customers can
-              browse, select, and purchase a wide range of grocery products
-              online.
-            </p>
+          <p>
+            The Grocery Website is a virtual marketplace where customers can
+            browse, select, and purchase a wide range of grocery products
+            online.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Grocery_Website"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Grocery_Website" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Grocery_Website/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Grocery_Website/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 5 -->
+      </div>
+      <!--End  Prohect 5 -->
 
-        <!-- //Project 6 // -->
-        <div class="project-card" id="project-6">
-          <div class="project-number">06</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      <!-- //Project 6 // -->
+      <div class="project-card" id="project-6">
+        <div class="project-number">06</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>LinkedIn Website Clone</h2>
+          <h2>LinkedIn Website Clone</h2>
 
-            <p>
-              This project aims to recreate the look and feel of the LinkedIn
-              website. It showcases my proficiency in front-end development and
-              design, as well as my attention to detail in replicating a complex
-              user interface.
-            </p>
+          <p>
+            This project aims to recreate the look and feel of the LinkedIn
+            website. It showcases my proficiency in front-end development and
+            design, as well as my attention to detail in replicating a complex
+            user interface.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Linkdin-Website"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Linkdin-Website" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Linkdin-Website//"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Linkdin-Website//" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!-- ///// -->
-        <!-- Project 7 -->
-        <div class="project-card" id="project-7">
-          <div class="project-number">07</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      </div>
+      <!-- ///// -->
+      <!-- Project 7 -->
+      <div class="project-card" id="project-7">
+        <div class="project-number">07</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Netflix Website Clone</h2>
+          <h2>Netflix Website Clone</h2>
 
-            <p>
-              Netflix is a subscription-based streaming service that allows our
-              members to watch TV shows and movies on an internet-connected
-              device.
-            </p>
+          <p>
+            Netflix is a subscription-based streaming service that allows our
+            members to watch TV shows and movies on an internet-connected
+            device.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Netflix"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Netflix" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Netflix/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Netflix/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 7 -->
+      </div>
+      <!--End  Prohect 7 -->
 
-        <!-- //Project 8 // -->
-        <div class="project-card" id="project-8">
-          <div class="project-number">08</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      <!-- //Project 8 // -->
+      <div class="project-card" id="project-8">
+        <div class="project-number">08</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Facebook Website Clone</h2>
+          <h2>Facebook Website Clone</h2>
 
-            <p>
-              Facebook is a social networking site that makes it easy for you to
-              connect and share with family and friends online. Originally
-              designed for college students, Facebook was created in 2004 by
-              Mark Zuckerberg while he was enrolled at Harvard University.
-            </p>
+          <p>
+            Facebook is a social networking site that makes it easy for you to
+            connect and share with family and friends online. Originally
+            designed for college students, Facebook was created in 2004 by
+            Mark Zuckerberg while he was enrolled at Harvard University.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Facebook-Clone-Website"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Facebook-Clone-Website" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Facebook-Clone-Website/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Facebook-Clone-Website/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!-- ///// -->
-        <!-- Project 9 -->
-        <div class="project-card" id="project-9">
-          <div class="project-number">09</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      </div>
+      <!-- ///// -->
+      <!-- Project 9 -->
+      <div class="project-card" id="project-9">
+        <div class="project-number">09</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>YouTube Replica</h2>
+          <h2>YouTube Replica</h2>
 
-            <p>
-              YouTube is a free video sharing website that makes it easy to
-              watch online videos. You can even create and upload your own
-              videos to share with others .
-            </p>
+          <p>
+            YouTube is a free video sharing website that makes it easy to
+            watch online videos. You can even create and upload your own
+            videos to share with others .
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Youtube_Website"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Youtube_Website" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Youtube_Website/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Youtube_Website/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 9 -->
-        <!-- //Project 10 // -->
-        <div class="project-card" id="project-10">
-          <div class="project-number">10</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      </div>
+      <!--End  Prohect 9 -->
+      <!-- //Project 10 // -->
+      <div class="project-card" id="project-10">
+        <div class="project-number">10</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Parallex Website</h2>
+          <h2>Parallex Website</h2>
 
-            <p>
-              Parallax scrolling is a web site trend where the background
-              content (i.e. an image) is moved at a different speed than the
-              foreground content while scrolling.
-            </p>
+          <p>
+            Parallax scrolling is a web site trend where the background
+            content (i.e. an image) is moved at a different speed than the
+            foreground content while scrolling.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/ParallaxWebsite"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/ParallaxWebsite" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/ParallaxWebsite/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/ParallaxWebsite/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
+      </div>
 
-        <!-- Project 11 -->
-        <div class="project-card" id="project-11">
-          <div class="project-number">11</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      <!-- Project 11 -->
+      <div class="project-card" id="project-11">
+        <div class="project-number">11</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Temperature Convertor</h2>
+          <h2>Temperature Convertor</h2>
 
-            <p>
-              A temperature converter helps convert the temperature between
-              Fahrenheit and Celsius scale. Temperature is measured using a
-              thermometer. While Kelvin (K) is the SI unit of temperature,
-              people generally use Centigrade or Celsius (°C) and Fahrenheit
-              (°F) to measure temperature.
-            </p>
+          <p>
+            A temperature converter helps convert the temperature between
+            Fahrenheit and Celsius scale. Temperature is measured using a
+            thermometer. While Kelvin (K) is the SI unit of temperature,
+            people generally use Centigrade or Celsius (°C) and Fahrenheit
+            (°F) to measure temperature.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Temperature-Convertor"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Temperature-Convertor" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Temperature-Convertor/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Temperature-Convertor/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 11 -->
+      </div>
+      <!--End  Prohect 11 -->
 
-        <!-- Project 12 -->
-        <div class="project-card" id="project-12">
-          <div class="project-number">12</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      <!-- Project 12 -->
+      <div class="project-card" id="project-12">
+        <div class="project-number">12</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Analog Clock</h2>
+          <h2>Analog Clock</h2>
 
-            <p>
-              Analog clocks are a classic way to display time, and this project
-              aims to create a digital representation of a traditional analog
-              clock. The project uses HTML for the structure, CSS for styling,
-              and JavaScript for clock functionality.
-            </p>
+          <p>
+            Analog clocks are a classic way to display time, and this project
+            aims to create a digital representation of a traditional analog
+            clock. The project uses HTML for the structure, CSS for styling,
+            and JavaScript for clock functionality.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Analog-Clock/tree/main"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Analog-Clock/tree/main" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Analog-Clock/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Analog-Clock/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 12 -->
+      </div>
+      <!--End  Prohect 12 -->
 
-        <!-- Project 13 -->
-        <div class="project-card" id="project-13">
-          <div class="project-number">13</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Tailwind.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      <!-- Project 13 -->
+      <div class="project-card" id="project-13">
+        <div class="project-number">13</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Tailwind.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Discord Clone</h2>
+          <h2>Discord Clone</h2>
 
-            <p>
-              Discord clone project created using HTML, Tailwind CSS, and
-              JavaScript. This project aims to replicate the user interface and
-              basic functionality of the popular communication platform Discord.
-              It's a simplified version intended for learning and practice
-              purposes.
-            </p>
+          <p>
+            Discord clone project created using HTML, Tailwind CSS, and
+            JavaScript. This project aims to replicate the user interface and
+            basic functionality of the popular communication platform Discord.
+            It's a simplified version intended for learning and practice
+            purposes.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Discord-Your-Place-to-Talk-and-Hang-Out"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Discord-Your-Place-to-Talk-and-Hang-Out" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagar-giradkar-discord-clone.netlify.app/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagar-giradkar-discord-clone.netlify.app/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 13 -->
+      </div>
+      <!--End  Prohect 13 -->
 
-        <!-- Project 14 -->
-        <div class="project-card" id="project-14">
-          <div class="project-number">14</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      <!-- Project 14 -->
+      <div class="project-card" id="project-14">
+        <div class="project-number">14</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Simple Calculator</h2>
+          <h2>Simple Calculator</h2>
 
-            <p>
-              Simple calculator implemented using HTML, CSS, and JavaScript. The
-              calculator allows users to perform basic arithmetic operations
-              such as addition, subtraction, multiplication, and division.
-            </p>
+          <p>
+            Simple calculator implemented using HTML, CSS, and JavaScript. The
+            calculator allows users to perform basic arithmetic operations
+            such as addition, subtraction, multiplication, and division.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Calculator/tree/main"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Calculator/tree/main" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Calculator/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Calculator/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 14 -->
+      </div>
+      <!--End  Prohect 14 -->
 
-        <!-- Project 15 -->
-        <div class="project-card" id="project-15">
-          <div class="project-number">15</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      <!-- Project 15 -->
+      <div class="project-card" id="project-15">
+        <div class="project-number">15</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>To-Do-List</h2>
+          <h2>To-Do-List</h2>
 
-            <p>
-              Simple To-Do List application built using HTML, CSS, and
-              JavaScript. The application allows users to create, update, and
-              delete tasks to manage their daily activities effectively.
-            </p>
+          <p>
+            Simple To-Do List application built using HTML, CSS, and
+            JavaScript. The application allows users to create, update, and
+            delete tasks to manage their daily activities effectively.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/To-Do-List"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/To-Do-List" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/To-Do-List/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/To-Do-List/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 15 -->
+      </div>
+      <!--End  Prohect 15 -->
 
-        <!-- Project 16 -->
-        <div class="project-card" id="project-16">
-          <div class="project-number">16</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-            </div>
+      <!-- Project 16 -->
+      <div class="project-card" id="project-16">
+        <div class="project-number">16</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+          </div>
 
-            <h2>Password Generator</h2>
+          <h2>Password Generator</h2>
 
-            <p>
-              A simple password generator web application built using HTML, CSS,
-              and JavaScript.
-            </p>
+          <p>
+            A simple password generator web application built using HTML, CSS,
+            and JavaScript.
+          </p>
 
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Password-Generator"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Password-Generator" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
 
-              <a
-                href="https://sagargiradkar.github.io/Password-Generator/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
+            <a href="https://sagargiradkar.github.io/Password-Generator/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
           </div>
         </div>
-        <!--End  Prohect 16 -->
-        <!-- //Project 17// -->
-        <div class="project-card" id="project-2">
-          <div class="project-number">17</div>
-          <div class="project-content">
-            <div class="project-skills-container">
-              <img src="images/stack/HTML.png" alt="" />
-              <img src="images/stack/CSS.png" alt="" />
-              <img src="images/stack/Javascript.svg" alt="" />
-              <!-- <img src="images/stack/NextJsCircle.png" alt="" />
+      </div>
+      <!--End  Prohect 16 -->
+      <!-- //Project 17// -->
+      <div class="project-card" id="project-2">
+        <div class="project-number">17</div>
+        <div class="project-content">
+          <div class="project-skills-container">
+            <img src="images/stack/HTML.png" alt="" />
+            <img src="images/stack/CSS.png" alt="" />
+            <img src="images/stack/Javascript.svg" alt="" />
+            <!-- <img src="images/stack/NextJsCircle.png" alt="" />
               <img src="images/stack/Tailwind.png" alt="" />
               <img src="images/stack/Redux.svg" alt="" />
               <img src="images/stack/Vercel.svg" alt="" /> -->
-            </div>
-
-            <h2>Amazon Website Clone</h2>
-
-            <p>
-              Amazon is an American multinational technology company focusing on
-              e-commerce, cloud computing, online advertising, digital
-              streaming, and artificial intelligence.
-            </p>
-
-            <div class="project-buttons">
-              <button class="btn">Read More</button>
-              <a
-                href="https://github.com/sagargiradkar/Amazon-Clone"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github icons"></i>
-              </a>
-
-              <a
-                href="https://sagargiradkar.github.io/Amazon-Clone/"
-                target="_blank"
-              >
-                <i class="fa-solid fa-link icons"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- ///// -->
-      </div>
-    </section>
-
-    <!-- ////////////////// skills section //////// -->
-    <section class="skill-section" id="skills">
-      <div class="skill-section-content container">
-        <div class="skill-fadded-text">skills</div>
-        <div class="skill-section-left">
-          <h2 class="skill-section-heading">
-            <span>M</span>e and <br />MyTech Stack
-          </h2>
-
-          <p>
-            Hello, I'm Sagar Giradkar, a third-year IT student currently
-            immersed in the pursuit of my Bachelor's in Engineering at PVG'S
-            COET, Pune. My academic journey has been a voyage of discovery,
-            fueling my passion for software development. Driven by a profound
-            willingness to learn, I am actively seeking a challenging job with a
-            rapidly growing organization—one that can provide a spectrum of
-            goals and job objectives within a contemporary framework.
-          </p>
-
-          <p>
-            In addition to my academic pursuits, I am gaining practical
-            experience as a Front-End Developer Intern at Argyleengma Tech Lab
-            in Ahmadabad. Here, I am actively contributing to the development of
-            the Budgetlizer project, a dynamic endeavor that has not only
-            sharpened my coding skills but also exposed me to the intricacies of
-            real-world software development. This internship has been a crucial
-            stepping stone, providing hands-on experience and insights into the
-            industry, further fueling my enthusiasm for the field.
-          </p>
-
-          <p>
-            In my quest for practical application, I am keenly exploring
-            opportunities for a full-stack internship in Web and Application Development. My
-            aspiration is to find a role that not only nurtures professional
-            development but also offers engaging experiences, fostering personal
-            growth. I believe that the intersection of technology and creativity
-            is where innovation thrives, and I am eager to contribute to such an
-            environment.
-          </p>
-
-          <!-- <p>
-            My proficiency spans a range of programming languages, including C,
-            CPP, Java, Python, and JavaScript. Additionally, I have honed my
-            skills in front-end technologies, specializing in React.js and React
-            Native, as evidenced by my ongoing work at Argyleengma Tech Lab.
-            These tools, coupled with my academic foundation, position me as a
-            versatile candidate ready to tackle the challenges of the
-            ever-evolving tech landscape.
-          </p>
-          <p>
-            Beyond my technical acumen, I bring a genuine enthusiasm for
-            collaborative endeavors. I am excited about the prospect of
-            contributing my skills and energy to a dynamic workplace where ideas
-            flourish, and where my commitment to excellence aligns with the
-            organization's vision. As I embark on this journey, I look forward
-            to not only enhancing my own capabilities but also making meaningful
-            contributions to the exciting field of software development.
-          </p> -->
-        </div>
-
-        <div class="skill-section-right">
-          <img
-            src="images/userAsset/blob vector.png"
-            class="blob-style"
-            alt=""
-          />
-          <img src="images/stack/Portfolio.jpg" alt="" />
-          <img src="images/stack/c.png" alt="" />
-          <img src="images/stack/C++.png" alt="" />
-          <!-- <img src="images/stack/Opengl-logo.svg" alt="" /> -->
-          <img src="images/stack/Python-Symbol.png" alt="" />
-          <!-- <img src="images/stack/Jupyter_logo.svg.png" alt="" /> -->
-          <img src="images/stack/java.png" alt="" />
-
-          <img src="images/stack/HTML.png" alt="" />
-          <img src="images/stack/CSS.png" alt="" />
-          <img src="images/stack/Tailwind.png" alt="" />
-          <img src="images/stack/Javascript.svg" alt="" />
-          <img src="images/stack/React.png" alt="" />
-
-          <!-- <img src="images/stack/Next.svg" alt="" /> -->
-          <img src="images/stack/Redux.svg" alt="" />
-
-          <!-- <img src="images/stack/MaterialUI.svg" alt="" /> -->
-          <img src="images/stack/NodeJs.svg" alt="" />
-          <img src="images/stack/Express.png" alt="" />
-          <img src="images/stack/MongoDB.svg" alt="" />
-
-          <!-- <img src="images/stack/Bootstrap.svg" alt="" /> -->
-          <!-- <img src="images/stack/Git.svg" alt="" /> -->
-          <img src="images/stack/Github.svg" alt="" />
-          <!-- <img src="images/stack/Bash.svg" alt="" /> -->
-          <!-- <img src="images/stack/sql.png" alt="" />
-          <img src="images/stack/SQLite370.svg.png" alt="" />
-           -->
-          <!-- <img src="images/stack/Cassandra_logo.svg.png" alt="" /> -->
-          <!-- <img src="images/stack/Vercel.svg" alt="" />
-          <img src="images/stack/ChartJs.svg" alt="" />
-          <img src="images/stack/Docker.svg" alt="" />
-          <img src="images/stack/Graphql.svg" alt="" />
-          <img src="images/stack/K8s.svg" alt="" /> -->
-        </div>
-      </div>
-    </section>
-
-    <!-- //////////////// contact section ////////// -->
-    <section class="contact-section" id="contact">
-      <div class="contact-section-content container">
-        <h2 class="contact-section-heading">Contact Me</h2>
-        <h3 class="contact-section-sub-heading">
-          Questions, thoughts, or just want to say hello?
-        </h3>
-
-        <form action="" class="contact-form">
-          <div class="form-field">
-            <input type="text" placeholder="Enter your name..." id="name" />
           </div>
 
-          <!-- <div class="form-field">
+          <h2>Amazon Website Clone</h2>
+
+          <p>
+            Amazon is an American multinational technology company focusing on
+            e-commerce, cloud computing, online advertising, digital
+            streaming, and artificial intelligence.
+          </p>
+
+          <div class="project-buttons">
+            <button class="btn">Read More</button>
+            <a href="https://github.com/sagargiradkar/Amazon-Clone" target="_blank">
+              <i class="fa-brands fa-github icons"></i>
+            </a>
+
+            <a href="https://sagargiradkar.github.io/Amazon-Clone/" target="_blank">
+              <i class="fa-solid fa-link icons"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- ///// -->
+    </div>
+  </section>
+
+  <!-- ////////////////// skills section //////// -->
+  <section class="skill-section" id="skills">
+    <div class="skill-section-content container">
+      <div class="skill-fadded-text">skills</div>
+      <div class="skill-section-left">
+        <h2 class="skill-section-heading">
+          <span>M</span>e and My Tech Stack
+        </h2>
+
+        <p>
+          I am Sagar Giradkar, a final-year Information Technology student at PVG's College of Engineering and
+          Technology, Pune, with a strong passion for software development.
+        </p>
+
+        <p>
+          I am actively pursuing opportunities as a Full-Stack Developer in Web and Application Development, where I can
+          leverage my skills and continue to grow professionally in a dynamic environment.
+        </p>
+
+      </div>
+
+      <div class="skill-section-right">
+        <img src="images/userAsset/blob vector.png" class="blob-style" alt="" />
+        <!-- <img src="images/stack/Portfolio.jpg" alt="" /> -->
+        <img src="images/stack/c.png" alt="" />
+        <img src="images/stack/C++.png" alt="" />
+        <img src="images/stack/Python-Symbol.png" alt="" />
+        <img src="images/stack/java.png" alt="" />
+        <img src="images/stack/HTML.png" alt="" />
+        <img src="images/stack/CSS.png" alt="" />
+        <img src="images/stack/Tailwind.png" alt="" />
+        <img src="images/stack/Javascript.svg" alt="" />
+        <img src="images/stack/React.png" alt="" />
+        <img src="images/stack/Redux.svg" alt="" />
+        <img src="images/stack/NodeJs.svg" alt="" />
+        <img src="images/stack/Express.png" alt="" />
+        <img src="images/stack/MongoDB.svg" alt="" />
+        <img src="images/stack/Github.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- //////////////// contact section ////////// -->
+  <section class="contact-section" id="contact">
+    <div class="contact-section-content container">
+      <h2 class="contact-section-heading">Contact Me</h2>
+      <h3 class="contact-section-sub-heading">
+        Questions, thoughts, or just want to say hello?
+      </h3>
+
+      <form action="" class="contact-form">
+        <div class="form-field">
+          <input type="text" placeholder="Enter your name..." id="name" />
+        </div>
+
+        <!-- <div class="form-field">
             <input type="tel" placeholder="Enter your Contact number......" id="contact">
         </div> -->
-          <div class="form-field">
-            <input
-              type="email"
-              placeholder="Enter your email address..."
-              id="email"
-            />
-          </div>
-
-          <div class="form-field">
-            <input
-              type="text"
-              placeholder="Enter your subject..."
-              id="subject"
-            />
-          </div>
-
-          <div class="form-field">
-            <textarea
-              name=""
-              id="my-textarea"
-              cols="30"
-              rows="10"
-              placeholder="Enter your message..."
-            ></textarea>
-          </div>
-
-          <div class="button-field">
-            <button type="button" onclick="SendEmail()" class="btn form-btn">
-              Send Message
-              <i class="fa-solid fa-paper-plane icon"></i>
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- //////////// footer ///////////// -->
-    <footer>
-      <div class="footer-content container">
-        <div class="footer-fadded-text">Sagar Giradkar</div>
-
-        <nav class="nav-div">
-          <ul>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#skills">skills</a></li>
-            <li><a href="#contact">contact me</a></li>
-          </ul>
-        </nav>
-
-        <div class="social-icons">
-          <a
-            href="https://www.linkedin.com/in/sagar-giradkar-b21581234/"
-            target="_blank"
-          >
-            <i class="fa-brands fa-linkedin icon"></i>
-          </a>
-
-          <a href="https://github.com/sagargiradkar" target="_blank">
-            <i class="fa-brands fa-github icon"></i>
-          </a>
-
-          <a href="https://twitter.com/giradkar_sagar" target="_blank">
-            <i class="fa-brands fa-twitter icon"></i>
-          </a>
-
-          <a href="https://www.instagram.com/sagar_giradkar/" target="_blank">
-            <i class="fa-brands fa-instagram icon"></i>
-          </a>
-
-          <a href="mailto: spgiradkar2002@gmail.com" target="_blank">
-            <i class="fa-regular fa-envelope icon"></i>
-          </a>
+        <div class="form-field">
+          <input type="email" placeholder="Enter your email address..." id="email" />
         </div>
+
+        <div class="form-field">
+          <input type="text" placeholder="Enter your subject..." id="subject" />
+        </div>
+
+        <div class="form-field">
+          <textarea name="" id="my-textarea" cols="30" rows="10" placeholder="Enter your message..."></textarea>
+        </div>
+
+        <div class="button-field">
+          <button type="button" onclick="SendEmail()" class="btn form-btn">
+            Send Message
+            <i class="fa-solid fa-paper-plane icon"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- //////////// footer ///////////// -->
+  <footer>
+    <div class="footer-content container">
+      <div class="footer-fadded-text">Sagar Giradkar</div>
+
+      <nav class="nav-div">
+        <ul>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#experience">experience </a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#contact">contact me</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sagar-giradkar-b21581234/" target="_blank">
+          <i class="fa-brands fa-linkedin icon"></i>
+        </a>
+
+        <a href="https://github.com/sagargiradkar" target="_blank">
+          <i class="fa-brands fa-github icon"></i>
+        </a>
+
+        <a href="https://twitter.com/giradkar_sagar" target="_blank">
+          <i class="fa-brands fa-twitter icon"></i>
+        </a>
+
+        <a href="https://www.instagram.com/sagar_giradkar/" target="_blank">
+          <i class="fa-brands fa-instagram icon"></i>
+        </a>
+
+        <a href="mailto: spgiradkar2002@gmail.com" target="_blank">
+          <i class="fa-regular fa-envelope icon"></i>
+        </a>
       </div>
-    </footer>
-    <!-- ///// -->
+    </div>
+  </footer>
+  <!-- ///// -->
 
-    <!-- /////// scripts /// -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-      var typeData = new Typed(".role", {
-        strings: [
-          "Web Developer",
-          "UI-UX Designer",
-          "Front End Developer",
-          "Backend Developer",
-          "Programmer",
-        ],
-        loop: true,
-        typeSpeed: 100,
-        backSpeed: 80,
-        backDelay: 1000,
-      });
-    </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <!-- /////// scripts /// -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typeData = new Typed(".role", {
+      strings: [
+        "React Developer",
+        "React-Native Developer",
+        "Web Developer",
+        "Front End Developer",
+        "Backend Developer",
+        "Programmer",
+      ],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 1000,
+    });
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-    <script>
-      function SendEmail() {
-        let name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
-        //let conatact = document.getElementById("contact").value;
-        let subject = document.getElementById("subject").value;
-        let message = document.getElementById("my-textarea").value;
+  <script>
+    function SendEmail() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      //let conatact = document.getElementById("contact").value;
+      let subject = document.getElementById("subject").value;
+      let message = document.getElementById("my-textarea").value;
 
-        let body =
-          "Name : " +
-          name +
-          "<br/> Email : " +
-          email +
-          "<br/> Subject : " +
-          subject +
-          "<br/> Messages : " +
-          message;
+      let body =
+        "Name : " +
+        name +
+        "<br/> Email : " +
+        email +
+        "<br/> Subject : " +
+        subject +
+        "<br/> Messages : " +
+        message;
 
-        Email.send({
-          SecureToken: "98efb6a3-b0cc-497f-afb7-4617e07a5590",
-          To: "spgiradkar2002@gmail.com",
-          From: "spgiradkar2002@gmail.com",
-          Subject: "Message From My Portfolio Website",
-          Body: body,
-        }).then((message) =>
-          alert("Thank You ! Your Message Send Succesfully")
-        );
-      }
-    </script>
-    <script src="./js/new_nav_app.js"></script>
-  </body>
+      Email.send({
+        SecureToken: "98efb6a3-b0cc-497f-afb7-4617e07a5590",
+        To: "spgiradkar2002@gmail.com",
+        From: "spgiradkar2002@gmail.com",
+        Subject: "Message From My Portfolio Website",
+        Body: body,
+      }).then((message) =>
+        alert("Thank You ! Your Message Send Succesfully")
+      );
+    }
+  </script>
+  <script src="./js/new_nav_app.js"></script>
+</body>
+
 </html>

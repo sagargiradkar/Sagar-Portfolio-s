@@ -31,12 +31,11 @@ ul {
 }
 
 nav {
-  width: 100%;
+  width: 100vw; /* Ensure the navbar takes full viewport width */
   background-color: var(--light-one);
-  font-family: 'Be Vietnam Pro', sans-serif; /* Apply the font family to the navbar */
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 300;
 }
-
 /* Add font-family to other relevant selectors in your existing code */
 
 .links ul a,
@@ -53,12 +52,11 @@ nav {
   display: flex;
   flex-direction: column;
   position: fixed;
-  /*overflow-x: hidden;*/
-  width: 100vw;
+  width: 100vw; /* Ensure the navbar takes full viewport width */
   z-index: 1001;
   top: 0;
   border-bottom: 1px solid gray;
-  box-shadow: 0px 15px 10px -15px #111;
+  box-shadow: 0px 15px 10px -15px;
 }
 
 .margin {
@@ -67,13 +65,10 @@ nav {
 }
 
 .nav_container {
-  position: relative;
-  z-index: 5;
   width: 100%; /* Set the width to 100% to occupy the full width */
   padding: 0; /* Remove padding */
 }
-
-nav .nav_container {
+.nav_container {
   display: flex;
   justify-content: space-around;
   align-items: center;
